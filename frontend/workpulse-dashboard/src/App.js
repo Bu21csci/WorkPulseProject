@@ -16,7 +16,7 @@ function App() {
   // Auto-refreshing logs every 60 seconds
   useEffect(() => {
     const fetchLogs = () => {
-      fetch("http://localhost:5000/logs")
+      fetch("https://workpulse-backend.onrender.com/logs") // 🔹 Changed to Render backend URL
         .then((res) => res.json())
         .then((data) => setLogs(data.reverse()))
         .catch((err) => console.error("Error fetching logs:", err));
